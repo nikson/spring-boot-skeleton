@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://github.com/nikson/demo-ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getPersonRequest>
+         <gs:personId>1</gs:personId>
+      </gs:getPersonRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
