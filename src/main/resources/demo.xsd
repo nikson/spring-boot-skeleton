@@ -18,7 +18,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:complexType name="person">
         <xs:sequence>
             <xs:element name="givenname" type="xs:string"/>

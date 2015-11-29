@@ -10,6 +10,10 @@ public class GetPersonResponse {
 
     Person person;
 
+    public GetPersonResponse() {
+
+    }
+
     public GetPersonResponse(Person person) {
         this.person = person;
     }

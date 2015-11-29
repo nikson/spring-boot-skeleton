@@ -10,6 +10,8 @@ public class Person {
     private String givenname;
     private String surname;
 
+    public Person(){}
+    
     public Person(long id, String givenname, String surname) {
         this.id = id;
         this.givenname = givenname;

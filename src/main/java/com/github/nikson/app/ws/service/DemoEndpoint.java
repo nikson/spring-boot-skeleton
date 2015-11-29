@@ -1,9 +1,8 @@
 package com.github.nikson.app.ws.service;
 
-import com.github.nikson.app.beans.GetPersonRequest;
-import com.github.nikson.app.beans.GetPersonResponse;
-import com.github.nikson.app.entity.Person;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.github.nikson.demo_ws.GetPersonRequest;
+import com.github.nikson.demo_ws.GetPersonResponse;
+import com.github.nikson.demo_ws.Person;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -22,11 +21,15 @@ public class DemoEndpoint {
     @ResponsePayload
     public GetPersonResponse getPerosn(@RequestPayload GetPersonRequest request) {
 
-        System.out.println("request id: " + request.getId());
+        System.out.println("request id: " + request.getPersonId());
 
-        Person p = new Person(1, "test", "test");
+        Person p = new Person();
+        p.setId(1);
+        p.setGivenname("Nikson");
+        p.setSurname("Paul");
 
-        GetPersonResponse response = new GetPersonResponse(p);
+        GetPersonResponse response = new GetPersonResponse();
+        response.setPerson(p);
 
         return response;
     }

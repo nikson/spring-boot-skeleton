@@ -10,9 +10,9 @@ public class Application {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
         
-        String[] beanNames = ctx.getBeanDefinitionNames();        
-        for (String beanName : beanNames) {
-            System.out.println(beanName);
-        }
+//        String[] beanNames = ctx.getBeanDefinitionNames();        
+//        for (String beanName : beanNames) {
+//            System.out.println(beanName);
+//        }
     }
 }
